@@ -12,7 +12,7 @@ func Rand(min int, max int) int {
     return mRand.Intn(max-min) + min
 }
 
-func GenerateCode(n int) {
+func GenerateCode(n int) string {
     b := make([]byte, n)
     if _, err := cRand.Read(b); err != nil {
         panic(err)
